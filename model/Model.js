@@ -34,6 +34,11 @@ Elza.init({
   long: Sequelize.STRING
 }, { sequelize, modelName: 'elza' })
 
+class BlockTokenList extends Model {}
+BlockTokenList.init({
+  token: Sequelize.STRING
+}, { sequelize, modelName: 'blocktokenlist' });
+
 User.beforeCreate(async (user) => {
     user.role = 'user'
     if (user.senha) {
@@ -69,5 +74,6 @@ module.exports = {
     Discard: Discard,
     User: User,
     Elza: Elza,
-    Type: Type
+    Type: Type,
+    BlockTokenList: BlockTokenList
 }

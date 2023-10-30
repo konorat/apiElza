@@ -19,7 +19,7 @@ const sequelize = new Sequelize('apiElza', 'root', 'root', {
 //     console.error('Erro ao sincronizar tabelas:', err);
 //   });
 
-sequelize.sync()
+// sequelize.sync()
 
 module.exports = {
     Sequelize: Sequelize,
